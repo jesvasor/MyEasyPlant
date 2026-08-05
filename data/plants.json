@@ -403,6 +403,100 @@
           }
         ]
       }
+    },
+    {
+      "id": "plt-303-l-strncl-la-454646",
+      "name": "Bird of Paradise",
+      "size": "Large",
+      "pot": null,
+      "potColor": "Stone Black",
+      "sku": "303-L-STRNCL-LA-454646",
+      "price": 149,
+      "url": "https://easyplant.com/products/large/white-bird-of-paradise-large?variant=Stone+Black&stand=no_stand&from=default&orderOnPage=10",
+      "image": "data/images/plt-303-l-strncl-la-454646.jpg",
+      "waterPeriod": "1 Month",
+      "waterEveryMonths": 1,
+      "lastWatered": "2026-07-19",
+      "addedAt": "2026-08-05",
+      "care": {
+        "light": {
+          "traits": [
+            {
+              "trait": "Direct Sunlight"
+            },
+            {
+              "trait": "Well Lit Space"
+            }
+          ],
+          "plantCareOnlyText": "If you live in a harsh climate where temperatures are high, monitor the placement of your plant, as leaves can scorch in intense direct sunlight. If this happens, you'll start to notice dark spots on the leaves, or the leaves will start to curl. \n\nIdeal places in the home for your White Bird of Paradise to get proper light are by south-facing windows, which tend to get the most direct sunlight. If you're concerned about the leaves getting scorched by high temperatures, east and west-facing windows also allow high exposure to natural light. If windows are not an option, take note of the spots in your home that get the most sun during the day. Place your White Birds of Paradise in any of these locations. \n",
+          "title": "White Bird of Paradise Light Requirements",
+          "text": "White Bird of Paradise grows best in a space with bright direct light, where the sunlight streams inside directly, and can also adapt to spaces with bright indirect light, where the sun rays are diffused. Avoid placing it in spaces with low light or spaces without natural sunlight."
+        },
+        "lightImage": "data/images/plt-303-l-strncl-la-454646-light.svg",
+        "water": {
+          "title": "How Often Should I Water My White Bird Of Paradise?",
+          "text": "<p>With easyplant, watering your white bird of paradise is simple. Make sure to check the easyplant reservoir once a month and fill it when empty, and you're all set! </p>",
+          "periodicity": "1 Month",
+          "text2": "If you don't have an easyplant to make watering fuss-free, you'll need to practice the soak and dry method. How often to water your White Bird of Paradise will depend on how long it takes the first 1\" of topsoil to dry out. Only after the first 1\" of soil is dry should you thoroughly water the root ball. Be sure the soil is well-drained to avoid root rot. During the winter months, cut back on watering to allow your plant to rest."
+        },
+        "careText": "On your White Bird of Paradise’s first few days at home, You may notice one or two leaves turning yellow or dying off; this is no reason for concern. Simply cut the leaves, and look forward to new and better-adjusted leaves growing. \n\nAs the new leaves grow, older ones might also become yellow and die. This is a natural cycle of plants, old leaves are dying to clear room for new, healthy growth. To help it grow optimally and evenly, occasionally dust the leaves and rotate the pot by ¼ once a month.\n",
+        "humidity": {
+          "title": "Temperature & Humidity",
+          "text": "<p>The ideal temperature for the White Bird of Paradise is between 60˚F and 80˚F (16˚C and 27˚C), though they can tolerate temperatures as low as 32˚F. Avoid exposing the plant to any temperatures lower than 29˚F. When the sun goes down, temperatures naturally drop, so an ideal temperature for the evening is between 50˚F and 55˚F (10˚C and 13˚C). Wherever you place your plant, keep it away from heat or cold sources like radiators, AC vents, droughts, heaters, etc. Because White Bird of Paradise is a tropical plant, they love high humidity. Crispy, brown edges may indicate that your White Bird of Paradise isn't getting adequate humidity. To create a humid environment for your plant, try placing a tray of water near the plant or using a humidifier. You can also group your plant with other plants, use a humidifier, or just place it in a bathroom or kitchen where there is naturally higher humidity. Keep in mind that too much direct sunlight can dry out the plant.</p>"
+        },
+        "growth": {
+          "text": "<p>White Bird of Paradise plants grow very slowly, with new leaves emerging about once a month, less so in winter. The plant leaves grow from the center, from which pups may also emerge. White Bird of Paradise will grow approximately three feet wide and five feet tall indoors. After several years, they may reach heights of up to eight feet. It takes about five years for the Strelitzia Nicolai to reach full maturity. </p>",
+          "title": "How Big Do White Bird of Paradise Plants Grow?"
+        },
+        "growthPotential": "Can reach 3 feet wide and 5 feet tall indoors",
+        "toxicity": {
+          "title": "Are White Bird Of Paradise Toxic for Pets & Kids?",
+          "text": "Some plants add a pleasing aesthetic to the home and can adapt well to the indoor environment but are unsafe to keep in a house with pets and kids. When considering a houseplant, it's important to know if there is anything toxic about the plant that could harm children or animals if touched or ingested. \n\nWhite Bird of Paradise may be moderately toxic if ingested, so keep away from curious children and pets. The toxicity ranges in intensity depending on the part of the plant ingested. The plant's leaves and stems are mildly toxic if ingested in large amounts. However, the flowers and seeds can cause dizziness, drowsiness, diarrhea, and vomiting in humans, cats, and dogs. \n\nIf a pet ingests any part of the White Bird of Paradise, take them to the veterinarian immediately. This plant is no more toxic to cats than dogs and vice versa; both will experience the same effects if ingested. Luckily, White Bird of Paradise contains a chemical called tannins, and the bitter taste should deter your pets from ingesting large amounts of the plant. \n"
+        },
+        "petFriendly": false,
+        "troubleshooting": {
+          "title": "Troubleshooting Common Problems with White Bird Of Paradise",
+          "text": "<p>Some areas to look out for when caring for the White Bird of Paradise are sunlight, watering, and humidity. The condition of the leaves, in particular, will let you know how the plant is fairing in your home. If you notice leaves of the White Bird of Paradise are wilting or curling out, relocate the pot to a more brightly lit area. Brown spots on the leaves may indicate the temperature is too high and scorching the leaves, so diffuse the sunlight coming in or relocate the plant to an area that isn't as hot but still gets plenty of light. If the edges of the leaves are turning brown and crispy, increase the humidity in the space. If you notice any leaf burn, there may be too much salt in the water or too much direct sunlight. Though not prone to pests and insects, if you notice any on your plant, wipe the leaves with a damp, soft cloth.</p>"
+        },
+        "bloomingSeason": null,
+        "about": {
+          "title": "About White Bird Of Paradise",
+          "commonNames": [
+            {
+              "name": "Strelitzia nicolai"
+            },
+            {
+              "name": "Giant White Bird of Paradise"
+            },
+            {
+              "name": "Wild Banana"
+            },
+            {
+              "name": ""
+            }
+          ],
+          "images": [],
+          "text": "Native to subtropical South Africa, the White Bird of Paradise graces our spaces with glossy, long, broad leaves towering to great heights, playfully hanging like birds in flight. A royal plant, if there ever was one, it received its scientific name, Strelitzia Nicolai, from Her Highness Queen Charlotte of Mecklenburg-Strelitz of England - lover of botany and the arts.\n",
+          "areaOfGrowth": "South Africa"
+        },
+        "areaOfGrowth": "South Africa",
+        "glanceText": "Water once a month with 30\"-40\" tall (including pot) Can reach 3 feet wide and 5 feet tall indoors Perfect in the corner or next to the bed Bird of Paradise Bio Native to tropical South Africa, Bird of Paradise graces our spaces while towering to great heights. Playfully hanging like birds in flight, its long and broad leaves naturally split so to allow wind to pass through in the wild. A royal plant if there ever was one, it received its scientific name, Strelitzia nicolai, from Her Highness Queen Charlotte of Mecklenburg-Strelitz of England - lover of botany and the arts. Light Instructions White Bird of Paradise grows best in a space with bright direct light, where the sunlight streams inside directly, and can also adapt to spaces with bright indirect light, where the sun rays are diffused. Avoid placing it in spaces with low light or spaces without natural sunlight. How does self-watering work? 1 Simply open the lid and fill with water 2 Your plant drinks only when needed 3 The result: healthy, long-lived plants that are easy to maintain easyplant benefits Carefree and convenient Never worry about when to water Much healthier plants that live longer We use proven Waterwick TM technology to optimize water consumption Advantages Other Water every 1 Month 1 Week Overwatering Rare Common Underwatering Never Common Over compacted dry soil Never Common Easily know when to water Stable root growth Bird of Paradise Care On your White Bird of Paradise’s first few days at home, You may notice one or two leaves turning yellow or dying off; this is no reason for concern. Simply cut the leaves, and look forward to new and better-adjusted leaves growing. As the new leaves grow, older ones might also become yellow and die. This is a natural cycle of plants, old leaves are dying to clear room for new, healthy growth. To help it grow optimally and evenly, occasionally dust the leaves and rotate the pot by ¼ once a month. Frequently Asked Questions Is White Bird of Paradise a good indoor plant? Yes, the White Bird of Paradise (Strelitzia nicolai) is an excellent indoor plant. It is valued for its large, striking leaves and its ability to thrive in bright, indirect light. With proper care, it can add a touch of tropical elegance to any indoor space. How tall does White Bird of Paradise get? A White Bird of Paradise will grow to around five feet tall if living indoors. If living outdoors, a White Bird of Paradise can grow as high as twenty feet. These plants are slow growers, so it will typically take around five years before the White Bird of Paradise fully matures. Company Shop Plants Gift Cards Plant Care Library easyplant Blog For Business Follow us Facebook Instagram TikTok Support FAQ Chat with us Accessibility Region US GB EU (en) EU (de) Stay Rooted with easyplant Join the easyplant family! Be the first to know about exclusive deals and exotic plant arrivals. Subscribe Privacy Policy . Cookie Policy . Terms of Use . Accessibility Statement Pat",
+        "height": "30\"-40\" tall (including pot)",
+        "faq": [
+          {
+            "title": "Is White Bird of Paradise a good indoor plant?",
+            "text": "<p>Yes, the White Bird of Paradise (Strelitzia nicolai) is an excellent indoor plant. It is valued for its large, striking leaves and its ability to thrive in bright, indirect light. With proper care, it can add a touch of tropical elegance to any indoor space.</p>"
+          },
+          {
+            "text": "A White Bird of Paradise will grow to around five feet tall if living indoors. If living outdoors, a White Bird of Paradise can grow as high as twenty feet. These plants are slow growers, so it will typically take around five years before the White Bird of Paradise fully matures. \n",
+            "title": "How tall does White Bird of Paradise get?"
+          },
+          {
+            "title": "Are White Birds of Paradise hard to care for?",
+            "text": "White Bird of Paradise care is no more taxing than other common house plants. These plants are relatively easy to care for if you pay attention to their condition. Much like other plants, the condition of the leaves will let you know if it's not getting enough sunlight, if the water you're using contains too much salt, or if there is not enough humidity in the space. The roots will let you know if you're overwatering. Periodically checking on your plant can resolve any issue quickly. \n"
+          }
+        ]
+      }
     }
   ]
 }
