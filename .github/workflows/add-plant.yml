@@ -1,0 +1,48 @@
+name: Add plant
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "easyplant product URL (with ?pot=…&variant=… for your configuration)"
+        required: true
+        type: string
+      last_watered:
+        description: "Last watered date YYYY-MM-DD (optional, defaults to today)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-writes
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Scrape plant page
+        run: |
+          if [ -n "${{ inputs.last_watered }}" ]; then
+            node scripts/scrape.js "${{ inputs.url }}" --last-watered "${{ inputs.last_watered }}"
+          else
+            node scripts/scrape.js "${{ inputs.url }}"
+          fi
+
+      - name: Commit
+        run: |
+          git config user.name "myeasyplant-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git commit -m "data: add plant from ${{ inputs.url }}"
+          # In case the dashboard committed meanwhile:
+          git pull --rebase origin main
+          git push

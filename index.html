@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>MyEasyPlant — watering dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="mep">
+    <header class="topbar">
+      <div class="brand">🌿 <span>MyEasyPlant</span></div>
+      <div class="topbar-status" id="topbarStatus"></div>
+      <div class="topbar-actions">
+        <button class="btn primary" id="btnAdd">＋ Add plant</button>
+        <button class="btn ghost" id="btnSettings" title="Settings">⚙️</button>
+      </div>
+    </header>
+    <main id="main"><div class="loading">Loading your plants…</div></main>
+    <footer class="foot" id="foot"></footer>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+  <script src="app.js"></script>
+</body>
+</html>

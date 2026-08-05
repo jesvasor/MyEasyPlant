@@ -1,0 +1,53 @@
+name: Watering reminders
+
+on:
+  schedule:
+    # Daily at 13:00 UTC (~9am ET). The script itself decides whether to send,
+    # based on overdue plants + the cadence set in the dashboard.
+    - cron: "0 13 * * *"
+  workflow_dispatch: {} # manual test runs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-writes
+  cancel-in-progress: false
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check overdue plants
+        id: check
+        run: node scripts/check-reminders.js
+
+      - name: Send email
+        if: steps.check.outputs.send == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.GMAIL_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          from: "MyEasyPlant 🌿 <${{ secrets.GMAIL_USERNAME }}>"
+          to: ${{ secrets.GMAIL_USERNAME }}
+          subject: ${{ steps.check.outputs.subject }}
+          html_body: file://email.html
+
+      - name: Commit reminder timestamp
+        if: steps.check.outputs.send == 'true'
+        run: |
+          git config user.name "myeasyplant-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/plants.json
+          git commit -m "chore: reminder sent $(date -u +%F)"
+          git pull --rebase origin main
+          git push
