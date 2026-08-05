@@ -194,11 +194,14 @@ async function dispatchAddPlant(url, lastWatered, statusEl) {
 }
 
 // ---------- rendering ----------
-function imgSrc(p) {
-  if (!p.image) return null;
+function assetSrc(repoPath, p) {
+  if (!repoPath) return null;
   if (CONFIG.hosted)
-    return `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${BRANCH}/${p.image}?v=${encodeURIComponent(p.addedAt || '')}`;
-  return p.image;
+    return `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${BRANCH}/${repoPath}?v=${encodeURIComponent(p.addedAt || '')}`;
+  return repoPath;
+}
+function imgSrc(p) {
+  return assetSrc(p.image, p);
 }
 
 function glanceChips(p) {
@@ -213,13 +216,15 @@ function glanceChips(p) {
   return chips;
 }
 
-// The scraped glance text starts with the chip labels we already render;
-// the readable part begins after the "<Name> Bio" heading.
+// The glance description is just the plant bio. Prefer the clean structured
+// about.text; fall back to the scraped glance text after its "<Name> Bio"
+// heading, trimmed to the first paragraph.
 function bioText(c) {
+  const about = c.about?.text && stripHtml(c.about.text);
+  if (about) return about;
   const gt = c.glanceText;
   if (!gt) return null;
-  const cut = gt.replace(/^.*? Bio /, '');
-  return cut !== gt ? cut : gt;
+  return gt.replace(/^.*? Bio /, '');
 }
 
 function cardHTML(p) {
@@ -267,6 +272,7 @@ function cardHTML(p) {
         <div class="section-body">
           <div class="chips">${(c.light?.traits || []).map((t) => `<span class="chip">☀️ ${esc(t.trait || t)}</span>`).join('')}</div>
           <p>${esc(c.light?.text || 'No light instructions saved.')}</p>
+          ${c.lightImage ? `<img class="light-img" src="${esc(assetSrc(c.lightImage, p))}" alt="Where to place ${esc(p.name)} for good light" loading="lazy" />` : ''}
         </div>
       </details>
       <details class="section">
@@ -278,7 +284,6 @@ function cardHTML(p) {
           ${c.growth?.text ? `<h4>${esc(c.growth.title || 'Growth')}</h4><p>${esc(stripHtml(c.growth.text))}</p>` : ''}
           ${c.toxicity?.text ? `<h4>${esc(c.toxicity.title || 'Toxicity')}</h4><p>${esc(stripHtml(c.toxicity.text))}</p>` : ''}
           ${c.troubleshooting?.text ? `<h4>${esc(c.troubleshooting.title || 'Troubleshooting')}</h4><p>${esc(stripHtml(c.troubleshooting.text))}</p>` : ''}
-          ${c.about?.text ? `<h4>About</h4><p>${esc(stripHtml(c.about.text))}</p>` : ''}
           ${faq}
           <div class="card-links">
             <a href="${esc(p.url)}" target="_blank" rel="noopener">easyplant page ↗</a>

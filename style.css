@@ -126,6 +126,7 @@ details.section[open] summary::after { transform: rotate(180deg); }
 details.section .section-body { padding: 0 2px 12px; font-size: 13.5px; color: var(--text); display: flex; flex-direction: column; gap: 8px; }
 details.section h4 { margin: 6px 0 0; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); }
 details.section p { margin: 0; white-space: pre-line; }
+.light-img { width: 100%; border-radius: 10px; display: block; }
 .card-links { display: flex; justify-content: space-between; align-items: center; padding-top: 6px; }
 .card-links a { color: var(--accent); font-size: 12.5px; }
 

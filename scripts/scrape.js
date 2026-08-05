@@ -114,6 +114,17 @@ function extractGlanceText(html) {
   return text.replace(/^.*?at a Glance\s*/i, '').slice(0, 3000) || null;
 }
 
+// The light-instructions illustration is a per-plant SVG like /care/light/new/AB.svg,
+// where the letters encode the plant's light traits.
+function extractLightImageUrl(html) {
+  const i = html.indexOf('Light Instructions');
+  const scope = i >= 0 ? html.slice(i, i + 8000) : '';
+  const m =
+    scope.match(/<img[^>]+src="(\/care\/light\/[^"]+)"/) ||
+    html.match(/<img[^>]+src="(\/care\/light\/[^"]+)"/);
+  return m ? 'https://easyplant.com' + m[1] : null;
+}
+
 function loadStore() {
   if (!fs.existsSync(DATA_FILE))
     return { settings: { reminderEveryDays: 3, lastReminderSent: null }, plants: [] };
@@ -181,6 +192,20 @@ async function main() {
     }
   }
 
+  let lightImagePath = null;
+  const lightUrl = extractLightImageUrl(html);
+  if (lightUrl) {
+    const res = await fetch(lightUrl, { headers: { 'User-Agent': UA }, redirect: 'follow' });
+    if (res.ok) {
+      fs.mkdirSync(IMAGES_DIR, { recursive: true });
+      lightImagePath = `data/images/${id}-light.svg`;
+      fs.writeFileSync(path.join(ROOT, lightImagePath), Buffer.from(await res.arrayBuffer()));
+      console.log('Saved light illustration ->', lightImagePath);
+    } else {
+      console.warn('WARNING: light illustration download failed, HTTP', res.status);
+    }
+  }
+
   const record = {
     id,
     name,
@@ -197,6 +222,7 @@ async function main() {
     addedAt: todayISO(),
     care: {
       light: plantData.light || model.light || null, // { title, text, traits: [{trait}] }
+      lightImage: lightImagePath, // per-plant illustration (suitable spots in a room)
       water: model.water || null, // { title, text, text2, periodicity }
       careText: plantData.care?.text || model.care?.text || null,
       humidity: model.humidity || null,
