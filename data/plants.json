@@ -109,6 +109,112 @@
           }
         ]
       }
+    },
+    {
+      "id": "plt-123-s-calbmx-sp-dfa41e-2",
+      "name": "Marxii Calathea",
+      "size": "Small",
+      "pot": "Yoko Plastic",
+      "potColor": "Sunset Orange",
+      "sku": "123-S-CALBMX-SP-DFA41E",
+      "price": 39,
+      "url": "https://easyplant.com/products/small/marxii-calathea-small-yoko-plastic?pot=Yoko+Plastic&variant=Sunset+Orange",
+      "image": "data/images/plt-123-s-calbmx-sp-dfa41e-2.jpg",
+      "waterPeriod": "1 Month",
+      "waterEveryMonths": 1,
+      "lastWatered": "2026-08-04",
+      "addedAt": "2026-08-05",
+      "care": {
+        "light": {
+          "text": "Calathea Marxii grows best in a space with bright indirect light, where the sun rays are diffused, and can also adapt to spaces with bright direct light, where the sunlight streams inside directly. Avoid placing it in spaces with low light or spaces without natural sunlight.",
+          "traits": [
+            {
+              "trait": "Direct Sunlight"
+            },
+            {
+              "trait": "Well Lit Space"
+            }
+          ],
+          "title": "Marxii Calathea Light Needs"
+        },
+        "water": {
+          "text2": "Without an Easyplant Pot, it's essential to water your Calathea once per week in the summertime and slightly less frequently during colder months. However, this is much easier said than done! Don't let standing water collect at the bottom of its pot for too long, as that could be detrimental; ensure not to let the soil dry out.",
+          "text": "<p>With easyplant, watering your Marxii Calathea is simple. Make sure to check the easyplant reservoir once a month and fill it when empty, and you're all set! </p>",
+          "title": "How Often Should I Water My Marxii Calathea?",
+          "periodicity": "1 Month"
+        },
+        "careText": "On your Calathea Marxii’s first few days at home, avoid moving the pot around once you choose its placement and allow it to adjust to a stable environment. To help it grow optimally and evenly, occasionally dust the leaves and rotate the pot by a ¼ turn once a month. You may prune old leaves to assist the new growth.",
+        "humidity": {
+          "title": "Temperature & Humidity",
+          "text": "<p>As a tropical plant by nature, Marxii Calathea loves warmth and humidity. To give your Calathea Burle Marx the best environment possible, aim to maintain a home temperature of 65°F to 75°F (18°C-24°C) and high humidity levels. This tropical species loves warm climates, with temperatures even reaching up to 85-90 °F (29 - 32°C). With these ideal conditions in place, you will be able to watch it thrive! With its origin in the tropical jungle, Calathea Burle Marx thrives on moisture. An ideal humidity level for this fishbone prayer plant is 60%, making it challenging to maintain these requirements indoors. To increase humidity levels, consider grouping your plant with other plants or place your plant next to a tray filled with pebbles and water. If necessary, you can also try using a humidifier. </p>"
+        },
+        "growth": {
+          "text": "Calathea Marxii grows slowly and steadily until reaching about two feet in height.  The Calathea Burle Marx is a low-growing plant that will grow to about 20 inches upon maturity. Its lush foliage expands to create an exquisite fan-like shape, making it the perfect size for any indoor living space. Its compact design allows you to enjoy its beauty without taking up too much room.\n\nOnce mature, it will keep growing new leaves to replace older ones. When it grows several new leaves at a time, it will normally lose one or two leaves from the bottom. Growth and leaf shedding are normal and to be expected.\n",
+          "title": "How Big Do Marxii Calathea Plants Grow?"
+        },
+        "growthPotential": "Typically grows up to 30\" tall indoors",
+        "toxicity": {
+          "text": "Calathea Marxii is non-toxic and safe for humans and animals alike. Safe for both cats and dogs to be around, it is also a great choice for households with children. Make sure to choose a spot out of reach for the little ones!  While the leaves may not be dangerous if touched or ingested, we recommend keeping your Marxii Calathea out of reach from curious fingers and paws.",
+          "title": "Are Marxii Calathea Toxic for Pets & Kids?"
+        },
+        "petFriendly": true,
+        "troubleshooting": {
+          "text": "If you notice leaves are curling, relocate the pot to a less brightly lit location.",
+          "title": "Troubleshooting Common Problems with Marxii Calathea"
+        },
+        "bloomingSeason": "May bloom in spring",
+        "about": {
+          "text": "Native to the Amazonian jungles of South America, Calathea Marxii wears large emblem-shaped leaves with bold strokes of forest green atop a deep burgundy underside. It belongs to the Marantaceae family, known as 'Prayer Plants,' which, much like humans and unlike most plants, have a wake-and-sleep cycle according to a circadian rhythm. This means the leaves move upwards during the night and downwards throughout the day in search of the sun.",
+          "areaOfGrowth": "Amazonian jungles of South America",
+          "title": "About Marxii Calathea",
+          "commonNames": [
+            {
+              "name": "Ctenanthe Burle-Marxii"
+            },
+            {
+              "name": "Never Never Plant"
+            },
+            {
+              "name": "Fishbone Prayer Plant"
+            },
+            {
+              "name": "Burle-Marxii Calathea"
+            },
+            {
+              "name": "Stromanthe amabilis"
+            },
+            {
+              "name": "Calathea amabilis"
+            },
+            {
+              "name": "Calathea fishbone"
+            },
+            {
+              "name": "Fishbone prayer plant"
+            },
+            {
+              "name": "Fishbone prayer plant"
+            }
+          ]
+        },
+        "areaOfGrowth": "Amazonian jungles of South America",
+        "glanceText": "Water once a month with 8\"-12\" tall (including pot) Typically grows up to 30\" tall indoors Pet friendly May bloom in spring Put it on a windowsill for a touch of natural elegance Marxii Calathea Bio Native to the Amazonian jungles of South America, Calathea Marxii wears large emblem-shaped leaves, with bold strokes of forest green atop a deep burgundy underside. It belongs to the Marantaceae family, known as ‘Prayer Plants’, which much like humans and unlike most plants, have a wake-and-sleep cycle according to a circadian rhythm. This means the leaves move upwards during the night and downwards throughout the day in search of the sun. Light Instructions Calathea Marxii grows best in a space with bright indirect light, where the sun rays are diffused, and can also adapt to spaces with bright direct light, where the sunlight streams inside directly. Avoid placing it in spaces with low light or spaces without natural sunlight. How does self-watering work? 1 Simply open the lid and fill with water 2 Your plant drinks only when needed 3 The result: healthy, long-lived plants that are easy to maintain easyplant benefits Carefree and convenient Never worry about when to water Much healthier plants that live longer We use proven Waterwick TM technology to optimize water consumption Advantages Other Water every 1 Month 1 Week Overwatering Rare Common Underwatering Never Common Over compacted dry soil Never Common Easily know when to water Stable root growth Marxii Calathea Care On your Calathea Marxii’s first few days at home, avoid moving the pot around once you choose its placement and allow it to adjust to a stable environment. To help it grow optimally and evenly, occasionally dust the leaves and rotate the pot by a ¼ turn once a month. You may prune old leaves to assist the new growth. Frequently Asked Questions How big do Fishbone prayer plants get? The magnificent Marxii Calathea may grow up to two feet in height and width. As it matures, this remarkable plant will constantly generate new leaves that replace the older ones. When fresh foliage is generated at once, a couple of the bottommost leaves may be released; such growth and periodic shedding are completely natural for this species. What is a fishbone prayer plant? The Marxii Calathea, also commonly known as a Fishbone prayer plant, is one of the most unique and exquisite plants you can display in your home. With its shimmery round leaves patterned with fishbone-like stripes that resemble intricate veins, this charming species will add to any space. Calatheas, more commonly known as Prayer Plants, are aptly named for their leaves which fold towards the sky come nightfall. The Ctenanthe Burle-Marxii is a spectacular type of this plant distinguished by its \"Fishbone\" patterned foliage. Company Shop Plants Gift Cards Plant Care Library easyplant Blog For Business Follow us <a href=\"https://www.facebook.com/Easyplant-1023046553",
+        "height": "8\"-12\" tall (including pot)",
+        "faq": [
+          {
+            "text": "The magnificent Marxii Calathea may grow up to two feet in height and width. As it matures, this remarkable plant will constantly generate new leaves that replace the older ones. When fresh foliage is generated at once, a couple of the bottommost leaves may be released; such growth and periodic shedding are completely natural for this species.",
+            "title": "How big do Fishbone prayer plants get?"
+          },
+          {
+            "text": "The Marxii Calathea, also commonly known as a Fishbone prayer plant, is one of the most unique and exquisite plants you can display in your home. With its shimmery round leaves patterned with fishbone-like stripes that resemble intricate veins, this charming species will add to any space.\n\nCalatheas, more commonly known as Prayer Plants, are aptly named for their leaves which fold towards the sky come nightfall. The Ctenanthe Burle-Marxii is a spectacular type of this plant distinguished by its \"Fishbone\" patterned foliage.\n",
+            "title": "What is a fishbone prayer plant?"
+          },
+          {
+            "title": "Is a fishbone prayer plant a Calathea?",
+            "text": "The Marxii Calathea, also known as a Fishbone prayer plant, is a type of Calathea species. This remarkable plant has lush green leaves patterned with fishbone-shaped stripes that resemble intricate veins. This charming species will add visual interest and life to any space when kept in proper conditions. "
+          }
+        ]
+      }
     }
   ]
 }
