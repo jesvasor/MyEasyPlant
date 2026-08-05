@@ -110,6 +110,111 @@
         ],
         "lightImage": "data/images/plt-123-s-calbmx-sp-dfa41e-light.svg"
       }
+    },
+    {
+      "id": "plt-197-s-alvasp-sp-dfa41e",
+      "name": "Aloe Vera",
+      "size": "Small",
+      "pot": "Yoko Plastic",
+      "potColor": "Sunset Orange",
+      "sku": "197-S-ALVASP-SP-DFA41E",
+      "price": 39,
+      "url": "https://easyplant.com/products/small/aloe-vera-small-yoko?variant=Sunset+Orange&stand=no_stand&from=default&orderOnPage=23&pot=Yoko+Plastic",
+      "image": "data/images/plt-197-s-alvasp-sp-dfa41e.jpg",
+      "waterPeriod": "3 Months",
+      "waterEveryMonths": 3,
+      "lastWatered": "2026-07-19",
+      "addedAt": "2026-08-05",
+      "care": {
+        "light": {
+          "text": "<p>Aloe Vera grows best in a space with bright direct light, where the sunlight streams inside directly, and can also adapt to spaces with bright indirect light, where the sun rays are diffused. Avoid placing it in spaces with low light or spaces without natural sunlight.</p>",
+          "traits": [
+            {
+              "trait": "Direct Sunlight"
+            },
+            {
+              "trait": "Well Lit Space"
+            }
+          ],
+          "plantCareOnlyText": "<p>A sunny south-facing or west-facing window is ideal, as this provides the consistent, intense light Aloe Vera craves. While it can adapt to slightly less light, it will maintain its vibrant form and compact growth best when given several hours of direct sun each day.</p>",
+          "title": "Aloe Vera Light Needs"
+        },
+        "lightImage": "data/images/plt-197-s-alvasp-sp-dfa41e-light.svg",
+        "water": {
+          "periodicity": "3 Months",
+          "title": "How Often Should I Water My Aloe Vera?",
+          "text2": "If you’re not using an easyplant pot, water your Aloe Vera sparingly. Allow the soil to dry out completely between waterings, and provide water only once every few weeks during the growing season, reducing even further in the winter months. Always ensure the pot has excellent drainage, as Aloe Vera’s succulent leaves are highly sensitive to excess moisture and can quickly suffer from root rot if overwatered.",
+          "text": "<p>With easyplant, caring for your Aloe Vera couldn’t be simpler. Just check the easyplant reservoir once every three months and refill it when empty, and you’re all set! This long interval reflects Aloe Vera’s natural drought tolerance, making it one of the easiest plants to maintain.</p>"
+        },
+        "careText": "<p>Aloe Vera benefits from simple, consistent care to keep it looking its best. Dust the leaves regularly with a soft cloth to keep them free from debris and allow maximum light absorption. Rotating the pot every few weeks ensures even growth and prevents the plant from leaning toward one side.</p><p>Pruning is rarely needed, but any damaged or dried leaves can be carefully removed at the base to maintain the plant’s tidy shape. Aloe Vera naturally grows upright and sculptural, so minimal intervention is required to preserve its elegant form.</p>",
+        "humidity": {
+          "text": "<p>Aloe Vera thrives in warm indoor environments, preferring temperatures between 65°F and 85°F. It is sensitive to the cold and should be kept away from drafts, open windows in winter, and air conditioning vents. If temperatures drop below 50°F, Aloe Vera may suffer damage to its fleshy leaves.</p><p>Humidity is not a concern for Aloe Vera, as it naturally grows in arid conditions. Average household humidity levels are more than sufficient, and no additional measures are needed to keep the plant healthy.</p>",
+          "title": "Temperature & Humidity"
+        },
+        "growth": {
+          "text": "<p>Indoors, Aloe Vera typically reaches a mature height of 1 to 2 feet, with individual leaves growing up to 18 inches long. Its growth rate is moderate, producing several new leaves each year that gradually expand the rosette shape of the plant. </p><p>While Aloe Vera can grow much larger outdoors in warm climates, indoor specimens remain compact and manageable, making them well-suited for tabletops, windowsills, or floor placement in bright light.</p>",
+          "title": "How Big Will My Aloe Vera Grow?"
+        },
+        "growthPotential": "Can reach up to 24\" indoors",
+        "toxicity": {
+          "text": "<p>Aloe Vera is considered toxic if ingested by pets or children. The gel inside its leaves may cause digestive discomfort, vomiting, or diarrhea when consumed. For this reason, it is best to keep the plant out of reach of curious pets and little ones.</p><p>When displayed responsibly, Aloe Vera remains a safe and beautiful addition to the home. Placing it on higher shelves, tall stands, or window ledges can help prevent accidental contact or ingestion.</p>",
+          "title": "Is Aloe Vera Toxic for Pets & Kids?"
+        },
+        "petFriendly": false,
+        "troubleshooting": {
+          "text": "<p>Aloe Vera is generally low-maintenance, but it can occasionally show signs of stress. Yellowing or browning leaves often point to overwatering, as excess moisture can cause the roots to suffocate and rot. If this occurs, allow the soil to dry completely before resuming a lighter watering routine. Brown leaf tips may also develop when the plant is exposed to drafts, sudden temperature shifts, or prolonged direct heat from radiators or heaters. Aloe Vera can sometimes attract pests such as mealybugs or scale; these can be wiped away with a damp cloth or gently treated with soapy water. By adjusting care promptly, Aloe Vera typically recovers quickly and continues to thrive.</p>",
+          "title": "Troubleshooting Common Problems with Aloe Vera"
+        },
+        "bloomingSeason": null,
+        "about": {
+          "text": "<p>Native to the Arabian Peninsula and now naturalized across warm, arid regions, Aloe Vera is a timeless succulent known for its fleshy, upright leaves and soothing qualities. Its thick, lance-shaped foliage forms a graceful rosette and stores a clear gel long used in skincare and wellness rituals. With its sculptural silhouette and soft green color, Aloe Vera brings a calm, restorative feel to any room. Subtle and self-contained, it suits spaces that call for both style and simplicity.</p>",
+          "commonNames": [
+            {
+              "name": "Aloe barbadensis"
+            },
+            {
+              "name": "Barbados aloe"
+            },
+            {
+              "name": "First Aid Plant"
+            },
+            {
+              "name": "Medicinal Aloe"
+            }
+          ],
+          "areaOfGrowth": "Africa",
+          "title": "About Aloe Vera"
+        },
+        "areaOfGrowth": "Africa",
+        "glanceText": "Water once every 3 months with easyplant’s system prevents overwatering and root rot 8\"-12\" tall (including pot) Can reach up to 24\" indoors Put it on a windowsill for a touch of natural elegance Aloe Vera Bio Native to the Arabian Peninsula and widely naturalized across tropical and arid regions, Aloe Vera is a timeless botanical known for its fleshy, upright leaves and soothing qualities. Its thick, lance-shaped foliage grows in a graceful rosette and stores a clear gel traditionally used for skin care and wellness rituals. With its sculptural shape and soft green hue, Aloe Vera adds calm presence and a sense of healing to any room. Subtle and self-contained, it’s a natural companion for spaces that call for both style and simplicity. Light Instructions Aloe Vera grows best in a space with bright direct light, where the sunlight streams inside directly, and can also adapt to spaces with bright indirect light, where the sun rays are diffused. Avoid placing it in spaces with low light or spaces without natural sunlight. How does self-watering work? 1 Simply open the lid and fill with water 2 Your plant drinks only when needed 3 The result: healthy, long-lived plants that are easy to maintain easyplant benefits Carefree and convenient Never worry about when to water Much healthier plants that live longer We use proven Waterwick TM technology to optimize water consumption Advantages Other Water every 3 Months 3 Weeks Overwatering Rare Common Underwatering Never Common Over compacted dry soil Never Common Easily know when to water Stable root growth Aloe Vera Care Aloe Vera benefits from simple, consistent care to keep it looking its best. Dust the leaves regularly with a soft cloth to keep them free from debris and allow maximum light absorption. Rotating the pot every few weeks ensures even growth and prevents the plant from leaning toward one side. Pruning is rarely needed, but any damaged or dried leaves can be carefully removed at the base to maintain the plant’s tidy shape. Aloe Vera naturally grows upright and sculptural, so minimal intervention is required to preserve its elegant form. Frequently Asked Questions How often should I refill the self-watering planter for my succulent? Only once every 3 months! Our self-watering system ensures your succulent gets the exact amount of water it needs. Why don't easyplant pots have drainage holes? Our innovative self-watering design maintains optimal soil moisture without drainage holes, ensuring healthy roots and a clean, mess-free experience. Company Shop Plants Gift Cards Plant Care Library easyplant Blog For Business Follow us Facebook Instagram TikTok Support FAQ Chat with us Accessibility Region US GB EU (en) EU (de) Stay Rooted with easyplant Join the easyplant family! Be the first to know about exclusive deals and e",
+        "height": "8\"-12\" tall (including pot)",
+        "faq": [
+          {
+            "text": "<p>Only once every 3 months! Our self-watering system ensures your succulent gets the exact amount of water it needs.</p>",
+            "title": "How often should I refill the self-watering planter for my succulent?"
+          },
+          {
+            "text": "<p>Our innovative self-watering design maintains optimal soil moisture without drainage holes, ensuring healthy roots and a clean, mess-free experience.</p>",
+            "title": "Why don't easyplant pots have drainage holes?"
+          },
+          {
+            "title": "What makes easyplant succulents different from regular succulents?",
+            "text": "<p>easyplant succulents are specially chosen for indoor success, come pre-potted in optimal soil, and utilize our self-watering technology to prevent common issues like overwatering and root rot.</p>"
+          },
+          {
+            "title": "Can Aloe Vera grow in low light?",
+            "text": "<p>Aloe Vera can survive in lower light conditions for short periods, but it will not thrive. For healthy growth, it requires several hours of bright light each day, ideally direct sunlight from a south- or west-facing window.</p>"
+          },
+          {
+            "text": "<p>Indoors, Aloe Vera grows at a moderate pace, producing new leaves throughout the year. With proper light and infrequent watering, it will gradually expand its rosette and can reach full size within a few years.</p>",
+            "title": "How fast does Aloe Vera grow indoors?"
+          },
+          {
+            "text": "<p>Aloe Vera grows relatively slowly in containers and only needs repotting every 2–3 years, or when the plant becomes root-bound. Choose a pot with excellent drainage to prevent excess moisture from damaging the roots.</p><p><br></p>",
+            "title": "Does Aloe Vera need to be repotted often?"
+          }
+        ]
+      }
     }
   ]
 }
