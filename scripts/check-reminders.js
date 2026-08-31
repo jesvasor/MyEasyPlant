@@ -38,6 +38,20 @@ const store = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
 const settings = store.settings || {};
 const cadence = Number(settings.reminderEveryDays) || 3;
 
+// Recipient: a REMINDER_TO repo secret wins, otherwise the address set in the
+// dashboard. That one is stored base64-encoded because this repo is public and
+// a plain-text address in a tracked file gets harvested by spam crawlers.
+function decodeEmail(b64) {
+  try {
+    return Buffer.from(b64, 'base64').toString('utf8').trim();
+  } catch {
+    return '';
+  }
+}
+const recipient =
+  (process.env.REMINDER_TO || '').trim() ||
+  (settings.reminderEmailB64 ? decodeEmail(settings.reminderEmailB64) : '');
+
 const overdue = store.plants
   .map((p) => {
     if (!p.lastWatered || !p.waterEveryMonths) return null;
@@ -60,6 +74,18 @@ if (sinceLast < cadence) {
   console.log(`last reminder ${settings.lastReminderSent} (${sinceLast}d ago) — waiting for cadence`);
   out('send', 'false');
   process.exit(0);
+}
+
+// A reminder is due but there is nowhere to send it — fail loudly rather than
+// swallowing the reminder and reporting a green run.
+if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(recipient)) {
+  console.error(
+    '::error::No reminder recipient configured, so the reminder cannot be sent. ' +
+      'Open the dashboard, click ⚙️ Settings, and fill in "Send reminders to" ' +
+      '(or set a REMINDER_TO repository secret).'
+  );
+  out('send', 'false');
+  process.exit(1);
 }
 
 // Dashboard URL from the repo this runs in: owner/repo -> https://owner.github.io/repo/
@@ -110,4 +136,5 @@ fs.writeFileSync(DATA_FILE, JSON.stringify(store, null, 2) + '\n');
 
 const names = overdue.map((o) => o.p.name).join(', ');
 out('send', 'true');
+out('to', recipient);
 out('subject', `🌿 Time to water: ${names.length > 60 ? overdue.length + ' plants' : names}`);

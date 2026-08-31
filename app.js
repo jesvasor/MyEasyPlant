@@ -92,6 +92,17 @@ async function ghFetch(path, opts = {}) {
 const b64encode = (s) => btoa(String.fromCharCode(...new TextEncoder().encode(s)));
 const b64decode = (b) => new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g, '')), (c) => c.charCodeAt(0)));
 
+// The reminder recipient is kept base64-encoded in the tracked JSON — this repo
+// is public and a plain address there is free food for spam crawlers.
+function decodeEmail(b64) {
+  if (!b64) return '';
+  try {
+    return b64decode(b64).trim();
+  } catch {
+    return '';
+  }
+}
+
 async function loadData() {
   // Local dev: relative file (fresh because no CDN involved).
   if (!CONFIG.hosted) {
@@ -164,9 +175,10 @@ async function removePlant(id) {
   if (await saveData(`data: remove plant ${p.name}`)) toast(`Removed ${p.name}`);
 }
 
-async function saveSettings(days) {
+async function saveSettings(days, email) {
   state.store.settings.reminderEveryDays = days;
-  const ok = await saveData(`settings: reminder cadence every ${days} days`);
+  state.store.settings.reminderEmailB64 = email ? b64encode(email) : null;
+  const ok = await saveData(`settings: reminders every ${days} days${email ? ', recipient updated' : ''}`);
   if (ok) toast('Settings saved');
   return ok;
 }
@@ -320,9 +332,12 @@ function render() {
   main.innerHTML = plants.length
     ? `<div class="grid">${plants.map(cardHTML).join('')}</div>`
     : `<div class="empty">No plants yet — add your first with the ＋ button.</div>`;
+  const to = decodeEmail(state.store.settings?.reminderEmailB64);
   $('#foot').innerHTML =
-    `Email reminders: every ${esc(state.store.settings?.reminderEveryDays ?? 3)} days while something is overdue · ` +
-    `data lives in <a href="https://github.com/${CONFIG.owner}/${CONFIG.repo}" target="_blank" rel="noopener">${CONFIG.owner}/${CONFIG.repo}</a>`;
+    (to
+      ? `Email reminders to ${esc(to)}: every ${esc(state.store.settings?.reminderEveryDays ?? 3)} days while something is overdue`
+      : `<span class="warn-text">⚠️ No reminder email set — open ⚙️ Settings to add one</span>`) +
+    ` · data lives in <a href="https://github.com/${CONFIG.owner}/${CONFIG.repo}" target="_blank" rel="noopener">${CONFIG.owner}/${CONFIG.repo}</a>`;
 }
 
 // ---------- card events (delegated) ----------
@@ -370,22 +385,39 @@ function openSettings(notice) {
         <li>Copy it and paste it above — do this once per device (desktop, phone).</li>
       </ol>
     </details>
+    <label>Send reminders to</label>
+    <input type="email" id="setEmail" value="${esc(decodeEmail(s.reminderEmailB64))}" placeholder="you@example.com" autocomplete="off" />
+    <p class="hint">Where the overdue-plant emails go. Stored obfuscated (not plain text) because this repo is public.</p>
+
     <label>Email reminders: check every N days</label>
     <input type="number" id="setDays" min="1" max="30" value="${esc(s.reminderEveryDays ?? 3)}" />
-    <p class="hint">While any plant is overdue, an email is sent at most once every N days until you mark it watered. Saving this needs the token.</p>
+    <p class="hint">While any plant is overdue, an email is sent at most once every N days until you mark it watered. Saving these needs the token.</p>
     <div class="row">
       <button class="btn" id="setCancel">Close</button>
       <button class="btn primary" id="setSave">Save</button>
     </div>
+    <div class="error" id="setError" hidden></div>
   `);
   $('#setCancel', root).onclick = closeModal;
   $('#setSave', root).onclick = async () => {
+    const err = $('#setError', root);
+    err.hidden = true;
     const t = $('#setToken', root).value.trim();
     if (t) localStorage.setItem('mep_token', t);
     else localStorage.removeItem('mep_token');
+
+    const email = $('#setEmail', root).value.trim();
+    if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      err.textContent = 'That does not look like an email address.';
+      err.hidden = false;
+      return;
+    }
     const days = Math.max(1, Math.min(30, parseInt($('#setDays', root).value, 10) || 3));
-    if (state.store && days !== state.store.settings.reminderEveryDays) {
-      if (!(await saveSettings(days))) return;
+
+    const cur = state.store?.settings || {};
+    const changed = days !== cur.reminderEveryDays || email !== decodeEmail(cur.reminderEmailB64);
+    if (state.store && changed) {
+      if (!(await saveSettings(days, email))) return;
     } else {
       toast('Settings saved');
     }

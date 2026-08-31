@@ -18,19 +18,37 @@ jobs:
   remind:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Check overdue plants
         id: check
+        env:
+          # Optional override: set this secret to keep the address out of the
+          # public repo entirely. Otherwise the dashboard setting is used.
+          REMINDER_TO: ${{ secrets.REMINDER_TO }}
         run: node scripts/check-reminders.js
+
+      - name: Verify mail credentials
+        if: steps.check.outputs.send == 'true'
+        env:
+          MAIL_USER: ${{ secrets.GMAIL_USERNAME }}
+          MAIL_PASS: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          if [ -z "$MAIL_USER" ] || [ -z "$MAIL_PASS" ]; then
+            echo "::error::A reminder is due but the Gmail secrets are missing." \
+                 "Add GMAIL_USERNAME (your Gmail address) and GMAIL_APP_PASSWORD" \
+                 "(from https://myaccount.google.com/apppasswords) under" \
+                 "Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
 
       - name: Send email
         if: steps.check.outputs.send == 'true'
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v18
         with:
           server_address: smtp.gmail.com
           server_port: 465
@@ -38,7 +56,7 @@ jobs:
           username: ${{ secrets.GMAIL_USERNAME }}
           password: ${{ secrets.GMAIL_APP_PASSWORD }}
           from: "MyEasyPlant 🌿 <${{ secrets.GMAIL_USERNAME }}>"
-          to: ${{ secrets.GMAIL_USERNAME }}
+          to: ${{ steps.check.outputs.to }}
           subject: ${{ steps.check.outputs.subject }}
           html_body: file://email.html
 

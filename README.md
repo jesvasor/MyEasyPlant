@@ -37,12 +37,21 @@ A plant counts as overdue from its due date until you mark it watered.
    - Permissions: **Contents: Read & write**, **Actions: Read & write**.
    Paste it in the dashboard's ⚙️ Settings. It is stored only in that browser's
    localStorage.
-4. **Gmail app password** for reminder emails (repo → Settings → Secrets and
+4. **Reminder recipient**: dashboard → ⚙️ Settings → "Send reminders to".
+   It is stored base64-encoded in `data/plants.json` (this repo is public, and a
+   plain-text address in a tracked file gets harvested by spam crawlers). To keep
+   it out of the repo entirely, set a `REMINDER_TO` repository secret instead —
+   the secret wins over the dashboard setting when both are present.
+5. **Gmail app password** for sending those emails (repo → Settings → Secrets and
    variables → Actions → New repository secret):
-   - `GMAIL_USERNAME` — your Gmail address.
+   - `GMAIL_USERNAME` — your Gmail address (the sending account).
    - `GMAIL_APP_PASSWORD` — create at <https://myaccount.google.com/apppasswords>
      (requires 2-step verification on the Google account).
-5. Optional sanity check: Actions tab → "Watering reminders" → Run workflow.
+
+   If a reminder comes due while the recipient or these secrets are missing, the
+   workflow **fails with a clear message** rather than reporting a green run and
+   silently dropping the reminder.
+6. Optional sanity check: Actions tab → "Watering reminders" → Run workflow.
 
 ## Daily use
 

@@ -1,7 +1,8 @@
 {
   "settings": {
     "reminderEveryDays": 3,
-    "lastReminderSent": null
+    "lastReminderSent": null,
+    "reminderEmailB64": null
   },
   "plants": [
     {
